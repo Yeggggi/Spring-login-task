@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: login_spring
+  profiles:
+    active: local
+  datasource:
+    url: jdbc:postgresql://localhost:5432/your_db_name
+    username: your_db_username
+    password: your_db_password
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+    open-in-view: false
+    defer-datasource-initialization: true
+  sql:
+    init:
+      mode: always
+  thymeleaf:
+    cache: false
+
+server:
+  port: 8080
+
